@@ -1,0 +1,82 @@
+<view class="container">
+  <!-- Top Tabs -->
+  <view class="tabs">
+    <view wx:for="{{tabs}}" wx:key="id" class="tab-item {{activeTab === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="switchTab">
+      {{item.name}}
+    </view>
+  </view>
+
+  <!-- Content for Private Lessons -->
+  <view wx:if="{{activeTab === 'private'}}">
+    <!-- Banner -->
+    <view class="banner">
+      <image src="{{bannerUrl}}" mode="widthFix"></image>
+    </view>
+
+    <!-- Store Info -->
+    <view class="store-info card">
+      <view class="title-bar">
+        <text class="title">私教门店</text>
+        <text class="more">更多门店 ></text>
+      </view>
+      <image src="{{storeInfo.imageUrl}}" class="store-image" mode="widthFix"></image>
+      <view class="store-details">
+        <text class="store-name">{{storeInfo.name}}</text>
+        <text class="store-address">{{storeInfo.address}}</text>
+        <text class="store-distance">{{storeInfo.distance}}</text>
+      </view>
+    </view>
+
+    <!-- Coach List -->
+    <view class="coach-list card">
+      <view class="title-bar">
+        <text class="title">私教教练 ({{coaches.length}})</text>
+      </view>
+      <scroll-view class="coaches" scroll-x="true">
+        <view class="coach-item" wx:for="{{coaches}}" wx:key="id">
+          <image src="{{item.avatarUrl}}" class="coach-avatar"></image>
+          <text class="coach-name">{{item.name}}</text>
+          <text class="coach-price">¥ {{item.price}} 起</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- Content for Group Lessons -->
+  <view wx:if="{{activeTab === 'group'}}">
+    <!-- Date Selector -->
+    <view class="date-selector">
+      <view wx:for="{{dates}}" wx:key="index" class="date-item {{index === selectedDateIndex ? 'selected' : ''}}" data-index="{{index}}" bindtap="selectDate">
+        <view class="weekday">{{item.weekday}}</view>
+        <view class="day">{{item.day}}</view>
+      </view>
+    </view>
+
+    <!-- Course List -->
+    <view class="course-list">
+        <view class="card" wx:for="{{courses}}" wx:key="title">
+            <view class="course-card">
+                <view class="course-tags">
+                    <text class="tag" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+                </view>
+                <view class="course-main">
+                    <image src="{{item.avatarUrl}}" class="course-avatar"></image>
+                    <view class="course-info">
+                        <view class="course-title">{{item.title}}</view>
+                        <view class="course-details">
+                            <text>{{item.time}} 强度：</text>
+                            <text class="stars" wx:for="{{item.level}}" wx:key="*this">★</text>
+                            <text> {{item.coach}}</text>
+                        </view>
+                    </view>
+                    <view class="course-booking">
+                         <text class="course-price">¥{{item.price}}</text>
+                        <button class="book-btn">预约</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+  </view>
+
+</view>

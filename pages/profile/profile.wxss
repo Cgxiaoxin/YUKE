@@ -1,0 +1,101 @@
+.container {
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+.profile-section {
+  background-color: #fff;
+  padding: 40rpx 20rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.user-id {
+  font-weight: bold;
+}
+
+.balance-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.balance-label, .balance-value {
+  font-size: 32rpx;
+}
+
+.recharge-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10rpx 30rpx;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+}
+
+.card-section {
+  margin-top: 20rpx;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.card-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.buy-card-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10rpx 30rpx;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+}
+
+.no-card-placeholder {
+  text-align: center;
+  color: #999;
+  padding: 40rpx 0;
+}
+
+.menu-section {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 25rpx 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.menu-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.menu-title {
+  font-size: 32rpx;
+  flex: 1;
+}
+
+.arrow {
+  color: #ccc;
+}

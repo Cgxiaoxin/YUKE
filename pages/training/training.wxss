@@ -1,0 +1,98 @@
+.container {
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.user-info .id {
+  font-weight: bold;
+}
+
+.user-info .days {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.stats-card {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.stat-item .value {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.stat-item .label {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.banner {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.banner image {
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+.record-card {
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+
+.record-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar-header {
+  padding: 10rpx 0;
+  font-weight: bold;
+}
+
+.day-cell {
+  padding: 15rpx 0;
+  font-size: 28rpx;
+}
+.day-cell.trained {
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.report-btn {
+  background-color: #333;
+  color: #fff;
+  margin-top: 20rpx;
+  border-radius: 30rpx;
+}

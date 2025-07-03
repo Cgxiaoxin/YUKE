@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/community/community",
+    "pages/index/index",
+    "pages/training/training",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "YUKE普拉提",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#333333",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/community/community",
+        "text": "社群",
+        "iconPath": "images/tabbar/icon_community_default.png",
+        "selectedIconPath": "images/tabbar/icon_community_selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "预约",
+        "iconPath": "images/tabbar/icon_booking_default.png",
+        "selectedIconPath": "images/tabbar/icon_booking_selected.png"
+      },
+      {
+        "pagePath": "pages/training/training",
+        "text": "训练",
+        "iconPath": "images/tabbar/icon_training_default.png",
+        "selectedIconPath": "images/tabbar/icon_training_selected.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/tabbar/icon_profile_default.png",
+        "selectedIconPath": "images/tabbar/icon_profile_selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,36 @@
+<view class="container">
+  <!-- Top Tabs -->
+  <view class="tabs">
+    <view wx:for="{{tabs}}" wx:key="id" class="tab-item {{activeTab === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="switchTab">
+      {{item.name}}
+    </view>
+  </view>
+
+  <!-- Community Content -->
+  <view wx:if="{{activeTab === 'community'}}">
+    <!-- Leaderboard -->
+    <view class="section-title">社群排行</view>
+    <view class="leaderboard">
+      <view class="rank-card" wx:for="{{leaderboard}}" wx:key="rank">
+        <image src="{{item.avatarUrl}}" class="rank-avatar"></image>
+        <view class="rank-name">{{item.name}}</view>
+        <view class="rank-value">{{item.value}}</view>
+        <view class="rank-label">{{item.label}}</view>
+      </view>
+    </view>
+
+    <!-- Live Photos -->
+    <view class="section-title">课程Live</view>
+    <view class="photo-wall">
+      <image wx:for="{{livePhotos}}" wx:key="*this" src="{{item}}" class="photo-item" mode="aspectFill"></image>
+    </view>
+    <view class="more-photos">查看更多训练照 ></view>
+  </view>
+  
+  <!-- Courses Content -->
+  <view wx:if="{{activeTab === 'courses'}}">
+    <view class="section-title">所有课程</view>
+    <!-- Course list will be implemented here -->
+  </view>
+
+</view>

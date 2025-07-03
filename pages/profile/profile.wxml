@@ -1,0 +1,35 @@
+<view class="container">
+  <!-- Profile Header -->
+  <view class="profile-section">
+    <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+    <view class="user-id">{{userInfo.id}}</view>
+  </view>
+
+  <!-- Balance -->
+  <view class="balance-section">
+    <text class="balance-label">余额：</text>
+    <text class="balance-value">¥ {{balance}}</text>
+    <button class="recharge-btn">充值</button>
+  </view>
+
+  <!-- Membership Card -->
+  <view class="card-section">
+    <view class="card-title-bar">
+      <text class="card-title">我的会员卡</text>
+      <button class="buy-card-btn">购卡</button>
+    </view>
+    <view wx:if="{{!membershipCard}}" class="no-card-placeholder">
+      您暂时还没有会员卡
+    </view>
+    <!-- Add card display logic here if membershipCard exists -->
+  </view>
+
+  <!-- Menu -->
+  <view class="menu-section">
+    <view class="menu-item" wx:for="{{menuItems}}" wx:key="title" data-title="{{item.title}}" bindtap="handleMenuItemTap">
+      <image src="{{item.icon}}" class="menu-icon"></image>
+      <text class="menu-title">{{item.title}}</text>
+      <text class="arrow">></text>
+    </view>
+  </view>
+</view>
